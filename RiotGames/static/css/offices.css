@@ -1,0 +1,207 @@
+* {
+    font-family: "FF Mark";
+    src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "FF Mark", Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+    background: #D13639;
+    color: #f9f9f9;
+}
+
+.container {
+    background-image: url("../images/offices/offices-main.jpg");
+    height: 544px;
+    width: 100%;
+    background-size: cover;
+    background-position-y: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#center2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: white;
+}
+
+#center1 {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    background-color: rgb(207, 10, 10);
+    color: white;
+    padding: 10px;
+}
+
+body {
+    background: rgb(231, 230, 227);
+}
+
+.heading {
+    text-align: center;
+    font-size: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 0%;
+}
+
+.matter {
+    text-align: center;
+    font-size: 30px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin: 0%;
+    padding-bottom: 100px;
+}
+
+.container3 {
+    height: 950px;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.item {
+    width: 300px;
+    height: 200px;
+    margin: 50px;
+    padding: 3px;
+    transition: transform 200ms ease;
+    cursor: pointer;
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+#item-1 {
+    background-image: url("../images/offices/adobestock-91600450.jpeg");
+    background-size: cover;
+}
+
+#item-2 {
+    background-image: url("../images/offices/barcelonia-spain.jpeg");
+    background-size: cover;
+}
+
+#item-3 {
+    background-image: url("../images/offices/Dubai-UAE.jpeg");
+    background-size: cover;
+}
+
+#item-4 {
+    background-image: url("../images/offices/dublin.jpeg");
+    background-size: cover;
+}
+
+#item-5 {
+    background-image: url("../images/offices/hongkong.jpeg");
+    background-size: cover;
+}
+
+#item-6 {
+    background-image: url("../images/offices/istanbul.jpeg");
+    background-size: cover;
+}
+
+#item-7 {
+    background-image: url("../images/offices/Los_angels.png");
+    background-size: cover;
+}
+
+#item-8 {
+    background-image: url("../images/offices/Mexico.jpeg");
+    background-size: cover;
+}
+
+#item-9 {
+    background-image: url("../images/offices/moscow.jpeg");
+    background-size: cover;
+}
+
+.container4 {
+    padding: 500px;
+    align-items: center;
+}
+
+.heading2 {
+    text-align: justify;
+    font-size: 80px;
+    padding-left: 360px;
+    padding-right: 360px;
+
+}
+
+.question {
+    text-align: justify;
+    font-size: 35px;
+    padding-left: 310px;
+    padding-right: 310px;
+    margin: 50px;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.answer {
+    text-align: justify;
+    font-size: 25px;
+    padding-left: 360px;
+    padding-right: 360px;
+}
+
+.info {
+    font-size: 30px;
+    position: relative;
+    top: 220px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container5 {
+    align-items: center;
+    padding-left: 360px;
+    margin-top: 20px;
+}
+
+.container5 {
+    cursor: pointer;
+    margin: 50px 0;
+}
+
+#questions {
+    border: 1px solid black;
+    padding: 15px;
+    color: black;
+    border-radius: 30px;
+    transition: background-color 200ms ease;
+}
+
+#questions>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#questions:hover {
+    background-color: rgb(53, 52, 52);
+    color: white;
+}

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: "FF Mark";
+  src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'FF Mark', Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.report:hover {
+  text-decoration: underline;
+}

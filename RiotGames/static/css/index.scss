@@ -1,0 +1,945 @@
+@import url(https://fonts.googleapis.com/css?family=Oswald:200,300,regular,500,600,700);
+
+$PRIMARY-COLOR: #D13639;
+$PRIMARY-TEXT-COLOR: #f9f9f9;
+
+@mixin common-for-svg($color, $h, $w) {
+    height: $h;
+    width: $w;
+    fill: $color;
+    cursor: pointer;
+}
+
+@mixin set-letter-spacing {
+    letter-spacing: 1px;
+}
+
+@font-face {
+    font-family: 'son';
+    src: url('../fonts/FRGROT.TTF') format('truetype');
+}
+
+@font-face {
+    font-family: 'rk';
+    src: url('../fonts/NocturneSerif-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'lor';
+    src: url('../fonts/Prince\ of\ Darkness\ Regular.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'wildrift';
+    src: url('../fonts/Story\ Brush\ Slanted.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'tft';
+    src: url('../fonts/Beaufort\ W01\ Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: "valorant";
+    src: url("../fonts/Valorant\ Font.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'lol';
+    src: url("../fonts/Friz\ Quadrata\ Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: 'FF Mark';
+    src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'Mark Pro';
+    src: url("../fonts/Mark\ Pro.ttf") format("truetype");
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'FF Mark';
+
+    &::selection {
+        background: $PRIMARY-COLOR;
+        color: $PRIMARY-TEXT-COLOR;
+    }
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    background-color: #111111;
+    color: $PRIMARY-TEXT-COLOR;
+    z-index: 999;
+
+    &__list {
+        &logo {
+            list-style: none;
+
+            .k-logo {
+                transition: fill 200ms ease-in-out;
+                font-size: 13px;
+                @include common-for-svg($PRIMARY-TEXT-COLOR, 27px, 85px);
+
+                &:hover {
+                    fill: $PRIMARY-COLOR;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        display: flex;
+        align-items: center;
+        gap: 3.3rem;
+        margin: 1rem;
+
+        &-item {
+            list-style: none;
+            position: relative;
+            font-size: 13px;
+            text-transform: uppercase;
+            @include set-letter-spacing;
+
+            &:not(:last-child) {
+                &::after {
+                    content: "";
+                    position: absolute;
+                    border-left: 0.35rem solid transparent;
+                    border-right: 0.35rem solid transparent;
+                    border-top: 0.35rem solid #7E7E7E;
+                    top: 50%;
+                    margin-left: 5px;
+                    transform: translateY(-80%);
+                }
+            }
+
+            cursor: pointer;
+
+            &:hover {
+                text-decoration: 2px underline $PRIMARY-COLOR;
+                text-underline-offset: .5rem;
+                transition: text-decoration 200ms ease-in-out;
+            }
+
+            &:hover ul,
+            &:focus ul {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            &drop {
+                display: flex;
+                flex-direction: column;
+                width: 9rem;
+                position: absolute;
+                top: 200%;
+                background: #222222;
+                border-radius: 0 0 5px 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 200ms ease-in-out, visibility 200ms ease-in-out;
+
+                li {
+                    margin: .5rem;
+                    text-transform: capitalize;
+                    list-style: none;
+                    padding: .5rem;
+                    transition: background 200ms ease-in-out;
+
+                    &:hover {
+                        background: #333333;
+                        border-radius: 5px;
+                        color: #C7C7C7;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    &__align-right {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 0;
+        justify-content: flex-end;
+        align-items: center;
+
+        &__lang {
+            .lang-icon {
+                @include common-for-svg($PRIMARY-TEXT-COLOR, 1.2rem, 1.2rem);
+                margin-right: 1rem;
+            }
+        }
+
+        &__search {
+            display: flex;
+            width: 12rem;
+            background-color: #2B2A29;
+            padding: .5rem .3rem .5rem 1.2rem;
+            border-radius: 50px;
+            align-items: center;
+            margin-right: 1rem;
+            z-index: 9999;
+
+            .search-icon {
+                margin-right: .4rem;
+                @include common-for-svg(#fff, 1.3rem, 1.3rem);
+            }
+
+            .search-box {
+                color: $PRIMARY-TEXT-COLOR;
+                border: none;
+                font-size: .7rem;
+                outline: none;
+                background-color: #2B2A29;
+                width: 100%;
+
+                &::placeholder {
+                    color: #757575;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &__signin {
+            background-color: $PRIMARY-COLOR;
+            color: #111111;
+            padding: .7rem .6rem;
+            border-radius: 50px;
+            margin-right: 2rem;
+            padding: .6rem 1rem;
+            cursor: pointer;
+
+            a {
+                @include set-letter-spacing;
+                font-size: .7rem;
+                vertical-align: middle;
+                text-transform: uppercase;
+                color: inherit;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            &:hover {
+                background-color: $PRIMARY-TEXT-COLOR;
+                color: $PRIMARY-COLOR;
+                transition: background-color 200ms ease-in-out;
+            }
+        }
+    }
+}
+
+.section-container {
+    &__1 {
+        img {
+            width: 100%;
+            line-break: 0;
+            filter: brightness(0.7);
+        }
+    }
+
+    &__2 {
+        margin-top: -5px;
+        background: #0A0A0A;
+        z-index: -999;
+        color: $PRIMARY-TEXT-COLOR;
+        display: grid;
+        grid-template-columns: 57% 43%;
+        padding-bottom: 5.5rem;
+
+        &>p {
+            margin: 4rem;
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        button {
+            display: flex;
+            justify-self: flex-end;
+            align-self: center;
+            width: fit-content;
+            height: fit-content;
+            padding: .4rem .9rem;
+            text-transform: uppercase;
+            margin-right: 4rem;
+            background-color: #222222;
+            outline: none;
+            border: none;
+            letter-spacing: 1px;
+            font-size: .75rem;
+            font-weight: bold;
+            color: $PRIMARY-TEXT-COLOR;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        &__span_2-5 {
+            &__card {
+                $FIRST-CARD-WIDTH: 98.5%;
+                user-select: none;
+                position: relative;
+                margin-left: 4rem;
+                cursor: pointer;
+
+                img {
+                    width: $FIRST-CARD-WIDTH;
+                    // width: 100%;
+                    border-radius: 12px;
+                    height: 18.9rem;
+                    object-fit: cover;
+                    padding: .2rem;
+                }
+
+                &__text {
+                    .Layer_1 {
+                        position: absolute;
+                        top: 1rem;
+                        left: 1rem;
+                        @include common-for-svg($PRIMARY-TEXT-COLOR, 2rem, 2rem);
+                        border-radius: 50%;
+                        padding: .5rem;
+                        background-color: #141212;
+                    }
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 98.8%;
+                    width: $FIRST-CARD-WIDTH;
+                    display: flex;
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    padding: 0 0 1rem 1rem;
+
+                    &:hover {
+                        outline: 2px solid gray;
+                        border-radius: 12px;
+                    }
+
+                    h {
+                        &2 {
+                            font-size: 31px;
+                            font-weight: bold;
+                            letter-spacing: .1px;
+                        }
+
+                        &3 {
+                            font-size: 15px;
+                            color: #5D5C5A;
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__col-4-cards {
+            $CARD-HEIGHT: 120px;
+            $CARD-WIDTH: 100%;
+            $SLANT-WIDTH: 50px;
+            $COL-4-CARD-PAD: 3px;
+            margin-right: 4rem;
+
+            &>div {
+                line-height: 1.2;
+                letter-spacing: .5px;
+                color: $PRIMARY-TEXT-COLOR;
+                font-family: 'Mark Pro' !important;
+                font-size: 18px;
+                font-weight: 700;
+                position: relative;
+                height: $CARD-HEIGHT;
+                width: $CARD-WIDTH;
+                background: #2B2A29;
+                display: flex;
+                background-color: transparent;
+                cursor: pointer;
+                padding: $COL-4-CARD-PAD;
+
+                &:hover {
+                    outline: 2px solid gray;
+                    border-radius: 12px;
+                }
+
+                &:not(:first-child) {
+                    margin-top: .4rem;
+                }
+
+                &>div {
+                    &:nth-child(2) {
+                        height: 100%;
+                        box-sizing: border-box;
+                        border-left: $SLANT-WIDTH solid #2B2A29;
+                        border-bottom: calc($CARD-HEIGHT - 2*$COL-4-CARD-PAD) solid transparent;
+                        margin-left: -3px;
+                        z-index: 99;
+                    }
+                }
+            }
+
+            @mixin imagePropsSection-2($img-url) {
+                position: absolute;
+                margin-right: $COL-4-CARD-PAD;
+                /* adding card-pad-section-2 */
+                height: calc(100% - 2*$COL-4-CARD-PAD);
+                /* subtract 2*(card-pad-section-2) from 100% */
+                width: 40%;
+                right: 0;
+                border-top-right-radius: 12px;
+                border-bottom-right-radius: 12px;
+                background: url($img-url) no-repeat;
+                background-size: cover;
+            }
+
+            @mixin contentPropsSection-2 {
+                user-select: none;
+
+                &__content {
+                    border-top-left-radius: 12px;
+                    border-bottom-left-radius: 12px;
+                    padding: 1.5rem 0 0 1.5rem;
+                    color: white;
+                    width: 60%;
+                    height: 100%;
+                    background: #2B2A29;
+                    box-sizing: border-box;
+
+                    p {
+                        &:first-child {
+                            height: 40px;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                        }
+
+                        &:last-child {
+                            user-select: none;
+                            font-size: .88rem;
+                            margin-top: .5rem;
+                            color: #5E5D5B;
+                            letter-spacing: .5px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+
+            @mixin set-svg-pos($set-color) {
+                svg {
+                    position: absolute;
+                    @include common-for-svg($set-color, 2rem, 2rem);
+                    right: 0;
+                    margin: .4rem .4rem 0 0;
+                    padding: .5rem;
+                    border-radius: 50%;
+                    background-color: #141212;
+                }
+            }
+
+            &-1 {
+                @include contentPropsSection-2();
+
+                &__mainImage-1 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
+                    @include imagePropsSection-2('../static/rg-fastco-award.png');
+                }
+            }
+
+            &-2 {
+                @include contentPropsSection-2();
+
+                &__mainImage-2 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
+                    @include imagePropsSection-2('../static/whm-riotnet-graphic.png');
+                }
+            }
+
+            &-3 {
+                @include contentPropsSection-2();
+
+                &__mainImage-3 {
+                    @include set-svg-pos(#FF4654);
+                    @include imagePropsSection-2('../static/marquee-raze-thumb.png');
+                }
+            }
+
+            &-4 {
+                @include contentPropsSection-2();
+
+                &__mainImage-4 {
+                    @include set-svg-pos($PRIMARY-TEXT-COLOR);
+                    @include imagePropsSection-2('../static/fortichexrg-4.png');
+                }
+            }
+        }
+    }
+
+    &__3 {
+        padding-top: 7rem;
+
+        .our-games {
+            font-size: 4rem;
+            margin-left: 4rem;
+            margin-bottom: 6rem;
+            font-weight: bold;
+            position: relative;
+            width: fit-content;
+
+            &::after {
+                position: absolute;
+                content: '';
+                height: .4rem;
+                // bottom: 2rem;
+                bottom: 0;
+                // left: 4rem;
+                left: 0;
+                right: 0;
+                width: 0;
+                background-color: $PRIMARY-COLOR;
+                transition: width 500ms ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+
+        color: $PRIMARY-TEXT-COLOR;
+        background: #1F1F1F;
+
+        $TITLE-FONT-SIZE: 2rem;
+
+        @mixin gridProp($freq, $percentage) {
+            display: grid;
+            grid-template-columns: repeat($freq, $percentage);
+        }
+
+        &__cards {
+            div {
+                width: 98%;
+
+                div {
+                    &.text {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: inherit;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        padding: 3px;
+                        object-fit: cover;
+
+                        &:hover {
+                            border: 2px solid gray;
+                            transform: scale(1.03);
+                            transition: transform 300ms ease-in-out;
+                        }
+                    }
+
+                    &.section-container__3__cards__img__container {
+                        height: 80%;
+                        width: 90%;
+
+                    }
+                }
+            }
+
+            &__row_1 {
+                margin-top: 3rem;
+                @include gridProp(2, 1fr);
+
+                .lol {
+                    span {
+                        font-family: 'lol';
+                        font-size: $TITLE-FONT-SIZE;
+                    }
+
+                    .lower-capital {
+                        font-size: 1.3rem !important;
+                        margin: 0 4px;
+                    }
+                }
+
+                .valorant {
+                    p {
+                        font-size: $TITLE-FONT-SIZE;
+                        font-family: 'valorant';
+                    }
+                }
+            }
+
+            &__row_2 {
+                margin-top: -5%;
+                @include gridProp(3, 1fr);
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+
+                .tft {
+                    span {
+                        font-family: 'tft';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+
+                        .big-t {
+                            font-size: 1.7rem;
+                        }
+                    }
+                }
+
+                .lolw {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .lower-capital {
+                        font-size: .9rem !important;
+                        margin: 0 4px;
+                    }
+
+                    .wildrift {
+                        font-family: 'wildrift' !important;
+                        font-size: $TITLE-FONT-SIZE;
+                    }
+                }
+
+                .lor {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .runeterra {
+                        font-family: 'lor';
+                        letter-spacing: 1px;
+                        font-size: calc($TITLE-FONT-SIZE - .2rem);
+                    }
+                }
+            }
+
+            &__row_3 {
+                margin-top: -2%;
+                @include gridProp(3, 1fr);
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+
+                .rk {
+                    span {
+                        font-family: 'rk';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+
+                    .caps {
+                        font-size: calc($TITLE-FONT-SIZE);
+                    }
+                }
+
+                .hm {
+                    span {
+                        font-family: 'lol';
+                        font-size: calc($TITLE-FONT-SIZE - .7rem);
+                    }
+                }
+
+                .convrgence {
+                    span {
+                        font-family: 'Oswald', Arial, serif;
+                        font-size: calc($TITLE-FONT-SIZE - .5rem);
+                        letter-spacing: 1px;
+                    }
+                }
+            }
+
+            &__row_4 {
+                @include gridProp(3, 1fr);
+                margin-top: -2%;
+
+                .son {
+                    span {
+                        font-family: 'son', Arial, serif;
+                        font-size: calc($TITLE-FONT-SIZE - .5rem);
+                        font-weight: 300;
+                    }
+
+                    .caps {
+                        font-size: calc($TITLE-FONT-SIZE + .3rem);
+                    }
+
+                    .lower-capital {
+                        font-size: .9rem !important;
+                        margin: 0 7px;
+                    }
+                }
+
+                .section-container__3__cards__img__container {
+                    display: flex;
+                    justify-self: center;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    &__4 {
+        // Works when X1 > X2 and X2 > 50%
+        $X1-POS: 55%;
+        $X2-POS: 50%;
+        $DIFF-OF-X1-X2: calc($X1-POS - $X2-POS);
+        background: #EBEBEB !important;
+
+        &__slantCardContainer {
+            position: relative;
+            width: 100%;
+            height: 600px;
+            overflow-x: hidden;
+
+            &__slantCard1 {
+                width: inherit;
+                clip-path: polygon(0% 0%, $X1-POS 0%, $X2-POS 100%, 0% 100%);
+            }
+
+            &__wrapText {
+                position: absolute;
+                top: 0;
+                width: inherit;
+                height: 100%;
+
+                &__makeSlant {
+                    width: inherit;
+                    height: 100%;
+                    clip-path: polygon(calc($X1-POS - 1%) 0%, $X1-POS 0%, $X2-POS 100%, calc($X2-POS - 1%) 100%);
+                    shape-outside: polygon(calc($X1-POS - 1%) 0%, $X1-POS 0%, $X2-POS 100%, calc($X2-POS - 1%) 100%);
+                    float: right;
+                }
+
+                .hiring {
+                    margin-top: 3rem;
+                    font-family: 'FF Mark';
+                    font-size: 3.2rem;
+                    text-align: center;
+                    font-weight: 700;
+                }
+
+                .hiring-caption {
+                    width: fit-content;
+                    font-family: 'FF Mark';
+                    color: #656462;
+                    text-align: center;
+                    font-size: 1.4rem;
+                    padding: 1rem 50% 2rem 2rem;
+                }
+
+                &__makeSlant__cards {
+                    margin-left: 13%;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    column-gap: 1rem;
+
+                    &__card {
+                        // display: inline-block;
+                        cursor: pointer;
+                        border-radius: 10px;
+                        // margin: 1rem;
+                        padding: 2rem;
+                        text-align: center;
+                        background-color: #DFDEDE;
+                        transition: background-color .3s ease-in-out;
+
+                        &>.number-count {
+                            font-family: 'Mark Pro';
+                            font-size: 3rem;
+                            font-weight: bold;
+                        }
+
+                        &>.designation {
+                            font-family: 'Mark Pro';
+                            font-weight: bold;
+                            font-size: 1.5rem;
+                            color: #656462;
+                        }
+
+                        &:hover {
+                            background-color: #CBCBCB;
+                        }
+                    }
+                }
+
+                &>.explore-careers {
+                    text-align: center;
+                    margin-top: 1rem;
+
+                    &>button {
+                        cursor: pointer;
+                        font-family: 'Mark Pro';
+                        font-size: 1.2rem;
+                        font-weight: 700;
+                        padding: 1rem 2rem;
+                        background-color: #d1363a;
+                        border: none;
+                        color: $PRIMARY-TEXT-COLOR;
+                        border-radius: 1.2rem;
+                        transition: background-color 300ms ease-in-out;
+
+                        &:hover {
+                            background-color: $PRIMARY-TEXT-COLOR;
+                            color: #d1363a;
+                            border: 1px solid #d1363a;
+                        }
+                    }
+                }
+            }
+
+            &__imageSlant {
+                position: absolute;
+                top: 0;
+                left: 100%;
+                transform: translateX(-$X2-POS);
+                width: inherit;
+                height: inherit;
+                clip-path: polygon($DIFF-OF-X1-X2 0%, $X2-POS 0%, $X2-POS 100%, 0% 100%);
+                background: url('../static/annie.jpg') no-repeat;
+                background-size: cover;
+            }
+        }
+    }
+
+    &__5 {
+        background: #252423;
+        padding: 2.4rem;
+
+        .footer {
+            display: grid;
+            grid-template-columns: 8% 80% 12%;
+
+            &>div {
+                &.footer-logo {
+                    a {
+                        svg {
+                            cursor: pointer;
+                            @include common-for-svg(#656462, 2rem, 2rem);
+                            transition: fill 200ms ease-in-out;
+
+                            &:hover {
+                                fill: $PRIMARY-COLOR;
+                            }
+                        }
+                    }
+                }
+
+                &.social-handles {
+                    display: grid;
+                    grid-template-columns: repeat(4, 1fr);
+                    column-gap: 1rem;
+
+                    a {
+                        &>svg {
+                            cursor: pointer;
+                            @include common-for-svg(#656462, 1rem, 1rem);
+
+                            &:hover {
+                                fill: $PRIMARY-COLOR;
+                            }
+                        }
+                    }
+                }
+
+                &.footer-content {
+                    ul {
+                        list-style: none;
+
+                        li {
+                            display: inline-block;
+                            margin-right: 1rem;
+
+                            a {
+                                font-family: 'Mark Pro';
+                                text-decoration: none;
+                                color: #656462;
+                                text-transform: uppercase;
+                                font-size: 11px;
+                                font-weight: bold;
+                                transition: color .2s ease-in-out;
+
+                                &:hover {
+                                    text-decoration: underline;
+                                    color: $PRIMARY-TEXT-COLOR;
+                                    text-underline-offset: 1px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.social-handles {
+
+                    a {
+                        &>svg {
+                            transition: fill 200ms ease-in-out;
+
+                            &:hover {
+                                fill: $PRIMARY-COLOR;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        hr {
+            border: 1px solid #656462;
+            margin-top: 1.5rem;
+        }
+
+        .other-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+
+            span {
+                font-family: 'FF Mark';
+                color: #656462;
+                font-size: 12px;
+                padding-top: 2rem;
+
+                &.go-up {
+                    cursor: pointer;
+                    font-stretch: extra-condensed;
+                    text-align: right;
+
+                    a {
+                        svg {
+                            margin-left: 1px;
+                            @include common-for-svg(#656462, 12px, 12px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

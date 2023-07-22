@@ -1,0 +1,374 @@
+body {
+  background-color: #e7e6e3;
+  font-family: "Mark Pro", Arial, sans-serif;
+}
+
+@font-face {
+  font-family: "FF Mark", Arial, Helvetica, sans-serif;
+  src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark";
+}
+
+*::selection {
+  background: #D13639;
+  color: #f9f9f9;
+}
+
+.main {
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto auto;
+}
+
+.row1 {
+  background-image: url(../images/social\ impact/img2.jpg);
+  height: 800px;
+}
+
+.row1>p {
+  position: relative;
+  top: 20%;
+  left: 45%;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #e7e6e3;
+  background-color: red;
+  display: inline;
+  font-family: "Mark Pro", Arial, sans-serif;
+}
+
+.row1>h1 {
+  font-size: 90px;
+  font-weight: 900;
+  position: relative;
+  top: 20%;
+  text-align: center;
+  color: #e7e6e3;
+  font-family: "Mark Pro", Arial, sans-serif;
+}
+
+.row1>h3 {
+  position: relative;
+  top: 20%;
+  text-align: center;
+  color: #e7e6e3;
+  font-family: "Mark Pro", Arial, sans-serif;
+  font-size: 30px;
+}
+
+.row1>img {
+  position: relative;
+  top: 25%;
+  left: 5%;
+  width: 1200px;
+
+}
+
+.row2 .heading {
+  padding-top: 40%;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 800;
+  font-family: "Mark Pro", Arial, sans-serif;
+  width: 80%;
+  padding-left: 25%;
+  color: #2b2a29;
+}
+
+.row2>p {
+  font-size: 30px;
+  text-align: justify;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+.row3 .container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.container-r1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding-top: 10%;
+}
+
+.container-c1 {
+  padding-left: 10%;
+}
+
+/* .row3 .container .container-r1 .container-c2{
+}
+.row3 .container .container-r1 .container-c3{
+} */
+.container-r2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.container-c1 {
+  text-align: justify;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 20px;
+}
+
+
+.container-c1>h3 {
+  text-align: center;
+  display: inline;
+  background-color: #000;
+  color: white;
+  position: relative;
+  left: 30%;
+  width: 40px;
+}
+
+.row4>h1 {
+  text-align: center;
+  font-size: 60px;
+  color: #2b2a29;
+}
+
+.button {
+  position: relative;
+  left: 40%;
+  overflow: hidden;
+  display: inline-block;
+  border: 0;
+  vertical-align: middle;
+  cursor: pointer;
+  overflow: visible;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 32px;
+  color: #e7e6e3;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 160px;
+  -webkit-font-smoothing: auto;
+  letter-spacing: .025em;
+  background-color: #d1363a;
+  background-image: linear-gradient(-183deg, #d1363a 49.5%, #2b2a29 50.5%);
+  background-size: 100% 255%;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
+  font-family: 'Eco Coding W02 WGL4', monospace;
+  width: 300px;
+}
+
+.row5 {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.row5-r1 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.row5-r1c1 .description {
+  text-align: justify;
+  position: relative;
+  top: 30%;
+  padding-left: 6%;
+  font-size: 30px;
+  color: #2b2a29;
+
+}
+
+.row5-r1c1 .description>p {
+  text-align: left;
+  width: 90%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.row5-r1c2 {
+  background-image: url(../images/social\ impact/img6.jpg);
+  background-repeat: no-repeat;
+  height: 658px;
+  position: relative;
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+.row5-r2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.row5 .row5-r2c1 {
+  background-image: url(../images/social\ impact/img7.jpg);
+  background-repeat: no-repeat;
+  padding-left: 10%;
+  padding-top: 10%;
+  height: 658px;
+}
+
+.row5 .row5-r2c2 .description {
+  text-align: justify;
+  position: relative;
+  top: 30%;
+  padding-left: 6%;
+  font-size: 30px;
+  color: #2b2a29;
+
+}
+
+.row5 .row5-r2c2 .description>p {
+  text-align: left;
+  width: 90%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.row5 .row5-r3 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.row5 .row5-r3c2 {
+  background-image: url(../images/social\ impact/img8.jpg);
+  background-repeat: no-repeat;
+  height: 658px;
+  padding-left: 10%;
+  padding-top: 10%;
+}
+
+.row5 .row5-r3c1 .description {
+  text-align: justify;
+  position: relative;
+  top: 30%;
+  padding-left: 6%;
+  font-size: 30px;
+  color: #2b2a29;
+
+}
+
+.row5 .row5-r3c1 .description>p {
+  text-align: left;
+  width: 90%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.row6>h1 {
+  font-size: 60px;
+  text-align: center;
+  color: #2b2a29;
+}
+
+.row6 .container {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
+.ro1 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.ro1 .co1>a {
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  top: 10%;
+  left: 20%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.ro1 .co2>a {
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top: 10%;
+  left: 20%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.ro1 .co3>a {
+  text-align: center;
+  position: relative;
+  top: 10%;
+  text-decoration: none;
+  left: 20%;
+  font-size: 30px;
+  color: #2b2a29;
+}
+
+.ro1 .co1>P {
+  background-color: #2b2a29;
+  color: white;
+  text-align: center;
+  position: relative;
+  left: 30%;
+  display: inline-block;
+}
+
+.ro1 .co2>P {
+  background-color: #2b2a29;
+  color: white;
+  text-align: center;
+  position: relative;
+  left: 30%;
+  display: inline-block;
+}
+
+.ro1 .co3>P {
+  background-color: #2b2a29;
+  color: white;
+  text-align: center;
+  position: relative;
+  left: 30%;
+  display: inline-block;
+}
+
+.row7 {
+  background-color: #dad9d5;
+}
+
+.row7-news {
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+}
+
+.icon>p {
+  display: inline;
+  background-color: red;
+  width: 20%;
+  text-align: center;
+  position: relative;
+  left: 20%;
+  font-size: 20px;
+  font-weight: 400;
+  color: #e7e6e3;
+  font-family: "Mark Pro", Arial, sans-serif;
+}
+
+.icon>h1 {
+  font-size: 200%;
+  text-align: justify;
+  width: 70%;
+  padding-left: 15%;
+  padding-top: 15%;
+  color: #2b2a29;
+}
+
+.icon>h3 {
+  text-align: justify;
+  width: 70%;
+  padding-left: 15%;
+  padding-top: 5%;
+  color: #2b2a29;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riot | Registration</title>
+    <link rel="stylesheet" href="../css/registration/registration.css" />
+    <link rel="shortcut icon" href="../static/images/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../static/css/registration.css" />
+</head>
+
+<body>
+    <div class="container">
+        <form class="registration-card" name="userDetails">
+            <p>Registration</p>
+            <div class="form_group_slideUp">
+                <input type="text" name="fname" id="fname" placeholder="First Name" required />
+                <label for="fname">First Name</label>
+                <p id="fname-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="text" name="lname" id="lname" placeholder="Last Name" required />
+                <label for="lname">Last Name</label>
+                <p id="lname-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="text" id="uname" name="uname" placeholder="Username" required />
+                <label for="uname">Username</label>
+                <p id="uname-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="email" name="email" id="email" placeholder="E-mail" autocomplete="email" required />
+                <label for="email">E-mail</label>
+            </div>
+            <div class="form_group">
+                <label for="gender">Gender</label>
+                <div class="gender-values">
+                    <input type="radio" name="gender" id="male" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" name="gender" id="female" value="female" />
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="date" name="dob" id="dob" required />
+                <label for="dob">Date of Birth</label>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="text" name="age" id="age" placeholder="Age" disabled required />
+                <label for="age">Age</label>
+                <p id="age-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="password" name="password" id="password" placeholder="Password" required />
+                <label for="password">Password</label>
+                <p id="password-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="password" name="confirmPassword" id="confirm-password" placeholder="Confirm Password"
+                    disabled required />
+                <label for="confirm-password">Confirm Password</label>
+                <p id="confirm-password-error"></p>
+            </div>
+            <div class="form_group_slideUp">
+                <input type="text" name="phNo" id="ph-no" autocomplete="mobile" maxlength="10"
+                    placeholder="Phone Number" />
+                <label for="ph-no">Phone Number</label>
+            </div>
+            <div class="agree-to-rules">
+                <input type="checkbox" name="agree" id="agree" />
+                <label for="agree">I abide all the rules & regulations, also I ensure to provide my credentials when
+                    mandatory.</label>
+            </div>
+            <div class="register-btn">
+                <input type="submit" name="register" id="register" value="REGISTER" disabled />
+            </div>
+        </form>
+
+    </div>
+</body>
+<script src="../static/js/registration.js"></script>
+
+</html>

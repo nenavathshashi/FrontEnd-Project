@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "FF Mark";
+    src: url("../static/fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "FF Mark", Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(231, 230, 227);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.container {
+    background-image: url("../images/life\ at\ riot/hero--dark-sketch--work-with-us_2.jpg");
+    height: 444px;
+    width: 100%;
+    border: 2px solid black;
+    background-size: cover;
+    background-position-y: center;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#left_cont {
+    height: 200px;
+    background-image: url("../images/life\ at\ riot/lobby-statue-small_2.jpg");
+    width: 600px;
+    height: 350px;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+#center1 {
+    position: absolute;
+    top: 13%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 15px;
+    background-color: rgb(207, 10, 10);
+    color: white;
+    padding: 10px;
+}
+
+#center2 {
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    font-size: 70px;
+    color: white;
+}
+
+.matter1 {
+    text-align: center;
+    font-size: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 50px;
+    margin: 0%;
+    padding-bottom: 100px;
+}
+
+.matter2 {
+    text-align: center;
+    font-size: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    margin: 0%;
+    padding-bottom: 100px;
+}
+
+.container3 {
+    height: 1300px;
+    width: 100%;
+}
+
+
+.item {
+    width: 300px;
+    height: 200px;
+    background-color: brown;
+    border: 2px solid green;
+    margin: 50px;
+    padding: 3px;
+}
+
+.item:hover {
+    transform: scale(1.5);
+}
+
+#_1 {
+    display: inline-block;
+    background-image: url("../images/life\ at\ riot/3_1.jpg");
+    background-size: cover;
+    width: 600px;
+    height: 550px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#_2 {
+    display: inline-block;
+    background-image: url("../images/life\ at\ riot/3_2.jpg");
+    background-size: cover;
+    width: 600px;
+    height: 550px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#_3 {
+    display: inline-block;
+    background-image: url("../images/life\ at\ riot/3_3.jpg");
+    background-size: cover;
+    width: 600px;
+    height: 550px;
+    margin-top: 30px;
+    margin-left: 50px;
+}
+
+#_4 {
+    display: inline-block;
+    width: 600px;
+    height: 550px;
+    margin-left: 50px;
+}
+
+#head_4 {
+    font-size: 50px;
+    margin-bottom: 140px;
+}
+
+#_4body {
+    font-size: 35px;
+    padding-bottom: 500px;
+}
+
+.container4 {
+    padding: 500px;
+    align-items: center;
+}
+
+.heading2 {
+    text-align: justify;
+    font-size: 80px;
+    padding-left: 360px;
+    padding-right: 360px;
+
+}
+
+.question {
+    text-align: justify;
+    font-size: 35px;
+    padding-left: 310px;
+    padding-right: 310px;
+    margin: 50px;
+    margin-bottom: 8px;
+    font-weight: 900;
+}
+
+.answer {
+    text-align: justify;
+    font-size: 25px;
+    padding-left: 360px;
+    padding-right: 360px;
+}
+
+.info {
+    font-size: 30px;
+    position: relative;
+    top: 220px;
+    align-items: center;
+    font-weight: bold;
+}
+
+.container5 {
+    align-items: center;
+    padding-left: 360px;
+    margin-top: 20px;
+}
+
+.container5 {
+    cursor: pointer;
+    margin: 50px 0;
+}
+
+#questions {
+    border: 1px solid #313131;
+    padding: 15px;
+    color: red;
+    border-radius: 30px;
+    color: black;
+    transition: background-color 200ms ease;
+}
+
+#questions>a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#questions:hover {
+    background-color: rgb(53, 52, 52);
+    color: white;
+}

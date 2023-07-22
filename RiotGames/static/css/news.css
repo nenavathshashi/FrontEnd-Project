@@ -1,0 +1,150 @@
+@font-face {
+  font-family: "FF Mark";
+  src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark", Arial, Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0%;
+}
+
+.main {
+  background-image: url(https://www.riotgames.com/assets/img/content/e99be4b4cd0b958b04fa3adceb5ce5ee/explore-hero-bg--large.jpg);
+  background-size: cover;
+  height: 350px;
+}
+
+.main h1 {
+  position: relative;
+  text-align: center;
+  padding-top: 5%;
+}
+
+.div1 span {
+  display: inline;
+  font-size: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: sideways-right;
+  position: relative;
+  left: 5%;
+}
+
+.flex span {
+  display: inline;
+  font-size: 15px;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+
+.btn2 {
+  position: relative;
+  top: -12%;
+  font-size: 15px;
+  display: inline;
+}
+
+.h21 {
+  font-size: 35px;
+}
+
+.p2 {
+  font-size: 18px;
+}
+
+.c1 {
+  display: block;
+  padding: 10px;
+  position: relative;
+  left: 3%;
+  top: -15%;
+}
+
+.btn1,
+.h21,
+.p1 {
+  position: relative;
+  top: -70px;
+  left: 7%;
+  display: inline;
+
+}
+
+.div1 h2 {
+  font-size: 30px;
+}
+
+.div1 p {
+  font-size: 20px;
+}
+
+.div {
+  overflow: hidden;
+}
+
+.div:hover img {
+  transform: scale(1.03);
+  transition: transform .3s ease;
+}
+
+.div:hover h2 {
+  text-decoration: underline;
+}
+
+.content:hover h2 {
+  text-decoration: underline;
+}
+
+.content:hover img {
+  transform: scale(1.05);
+  transition: transform .5s ease;
+  opacity: 80%;
+}
+
+.content {
+  width: 40%;
+  text-align: left;
+  margin-right: 4%;
+  margin-left: 4%;
+  display: inline;
+  overflow: hidden;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+
+.btn:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.btn {
+  position: relative;
+  left: 45%;
+  color: grey;
+  text-decoration: underline;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  border-radius: 50px;
+  background-color: #E7E6E3;
+  border-color: #797979;
+}
+
+.report:hover {
+  text-decoration: underline;
+}

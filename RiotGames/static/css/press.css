@@ -1,0 +1,174 @@
+@font-face {
+  font-family: "FF Mark";
+  src: url("../fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark";
+}
+
+*::selection {
+  background: #D13639;
+  color: #f9f9f9;
+}
+
+body {
+  background-color: #E7E6E3;
+}
+
+.side-nav-logos {
+  display: grid;
+  grid-template-columns: 32% 68%;
+}
+
+.cl {
+  display: grid;
+  grid-template-rows: 100px;
+
+}
+
+.side-nav-logos .r2 {
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 280px 280px 280px;
+  grid-template-rows: 260px;
+}
+
+.logos {
+  display: grid;
+  grid-template-rows: 100px;
+}
+
+.logos>.body>.logo>img {
+  width: 260px;
+  height: 146px;
+}
+
+h1 {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.press {
+  background: url('../images/press/malphite.jpg') repeat;
+  height: 210px;
+  width: 100%;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-style: normal;
+  font-family: "Mark pro", Arial, sans-serif;
+  font-weight: 700;
+  color: #2b2a29;
+  width: 240px;
+}
+
+.side-nav-logos .logos .head>h2 {
+  text-align: left;
+  font-family: 'Mark pro', Arial, sans-serif;
+  font-size: 20px;
+  padding: 10px 0;
+  color: #2b2a29;
+  top: 50%;
+
+}
+
+.side-bar {
+  display: block;
+  font-family: 'Mark pro', Arial, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #2b2a29;
+  padding: 10px 0;
+  font-size: 14px;
+  cursor: pointer;
+  position: sticky;
+  top: 0px;
+
+}
+
+.c2>div>ul {
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+.li1:hover {
+  color: #D1363A;
+  list-style-type: none;
+}
+
+.logo>a {
+  color: #D1363A;
+  font-family: "Eco Coding W02 WGL4", monospace;
+  letter-spacing: .025em;
+  line-height: 22px;
+  font-weight: 400;
+}
+
+.r1>h1 {
+  font-family: "Mark Pro", Arial, sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  color: #2b2a29;
+  padding: 10px 0;
+  font-size: 44px;
+  line-height: 54px;
+  text-align: center;
+  top: 100px;
+}
+
+.r1 {
+  display: grid;
+  grid-template-rows: 150px;
+}
+
+.r2 {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.r2 .c2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 260px;
+}
+
+.li2 {
+  color: #D1363A;
+  font-family: "Eco Coding W02 WGL4", monospace;
+  letter-spacing: .025em;
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  width: 180px;
+}
+
+.li2:hover {
+  color: #2b2a29;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.r2.c2>h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  font-style: normal;
+}

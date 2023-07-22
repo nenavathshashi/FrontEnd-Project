@@ -1,0 +1,255 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url(../fonts/FontFont_FF.Mark.Pro.otf) format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mark Pro", Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0 2%;
+  background: url(../images/registration/valo-7.png) repeat;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+input:disabled {
+  background: rgba(97, 95, 95, 0.2) !important;
+  cursor: default !important;
+}
+
+input[type=submit]:disabled {
+  background: rgba(97, 95, 95, 0.2) !important;
+  cursor: default !important;
+  border: none !important;
+  color: #fff !important;
+}
+
+.container {
+  z-index: 999;
+  margin: 2rem 0;
+  border-radius: 5px;
+  box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.8);
+  padding: 2rem;
+  width: fit-content;
+  background: url(../images/registration/explore-hero-bg--large.jpg);
+}
+
+.container .registration-card>.register-btn {
+  text-align: center;
+}
+
+.container .registration-card>.register-btn input {
+  margin-top: 1.5rem;
+  background: #d13639;
+  color: #fcf8f8;
+  border: 1px solid #d13639;
+  border-radius: 5px;
+  padding: 0.5rem 1.4rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.container .registration-card>.register-btn input:hover {
+  background: #fefefe;
+  color: #d13639;
+  border: 1px solid #d13639;
+}
+
+.container .registration-card>div {
+  margin-bottom: 1rem;
+}
+
+.container .registration-card>.form_group {
+  color: gray;
+  margin: 1.6rem 0;
+}
+
+.container .registration-card>.form_group>label {
+  font-size: 1.1rem;
+}
+
+.container .registration-card>.form_group>.gender-values {
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.container .registration-card>.form_group>.gender-values>label {
+  padding-right: 1rem;
+  cursor: pointer;
+}
+
+.container .registration-card>.form_group>.gender-values>input[type=radio] {
+  cursor: pointer;
+  margin-right: 4px;
+  appearance: none;
+  width: 1.1rem;
+  height: 1.1rem;
+  border: 2px solid #d13639;
+  border-radius: 50%;
+  background-clip: content-box;
+  transition: all 300ms;
+}
+
+.container .registration-card>.form_group>.gender-values>input[type=radio]:checked {
+  width: 0.95rem;
+  height: 0.95rem;
+  background: #d13639;
+}
+
+.container .registration-card>p {
+  display: inline-block;
+  font-size: 2rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: #fefefe;
+  text-transform: uppercase;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container .registration-card>p::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 105%;
+  height: 2px;
+  background: #d13639;
+}
+
+.container .registration-card .form_group_slideUp {
+  position: relative;
+  width: 100%;
+  padding: 15px 0 0;
+  margin-top: 10px;
+}
+
+.container .registration-card .form_group_slideUp>#age-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>#fname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>#lname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>#uname-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>#confirm-password-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>#password-error {
+  margin-top: 0.7rem;
+  color: #d13639;
+}
+
+.container .registration-card .form_group_slideUp>input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid #fefefe;
+  outline: none;
+  font-size: 1.1rem;
+  color: #fefefe;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+.container .registration-card .form_group_slideUp>input::placeholder {
+  color: transparent;
+}
+
+.container .registration-card .form_group_slideUp>input:placeholder-shown~label {
+  font-size: 1.1rem;
+  cursor: text;
+  top: 20px;
+}
+
+.container .registration-card .form_group_slideUp>input:focus {
+  padding-bottom: 6px;
+  border-bottom: 2px solid #d13639;
+}
+
+.container .registration-card .form_group_slideUp>input:focus~label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.container .registration-card .form_group_slideUp>label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 0.8rem;
+  color: gray;
+}
+
+.container .registration-card>.agree-to-rules {
+  color: #fefefe;
+  user-select: none;
+  display: flex;
+  align-items: center;
+}
+
+.container .registration-card>.agree-to-rules>input {
+  cursor: pointer;
+}
+
+.container .registration-card>.agree-to-rules>input[type=checkbox] {
+  margin-right: 0.6rem;
+  appearance: none;
+  position: relative;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 2px solid #d13639;
+  background-clip: content-box;
+  padding: 3px;
+}
+
+.container .registration-card>.agree-to-rules>input[type=checkbox]:checked {
+  transition: all 100ms ease-in-out;
+  background: #d13639;
+}
+
+.container .registration-card>.agree-to-rules>input[type=checkbox]:checked::after {
+  font-size: 1rem;
+  content: "✓";
+  color: #fefefe;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .registration-card>.agree-to-rules>label {
+  cursor: pointer;
+}

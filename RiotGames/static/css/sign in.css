@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./fonts/Mark Pro.ttf") format("truetype");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mark Pro", Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+  background: #D13639;
+  color: #f9f9f9;
+}
+
+body {
+  background: url(../images/sign\ in/img1.jpg) no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@keyframes changeBgOnHover {
+  0% {
+    background: linear-gradient(to top, #222222 25%, #d13639 26%);
+  }
+  25% {
+    background: linear-gradient(to top, #222222 50%, #d13639 51%);
+  }
+  50% {
+    background: linear-gradient(to top, #222222 75%, #d13639 76%);
+  }
+  100% {
+    background: linear-gradient(to top, #222222 100%, #d13639 101%);
+  }
+}
+.container > svg {
+  fill: #f9f9f9;
+  margin-left: 1rem;
+  height: 6rem;
+  width: 10rem;
+}
+.container > .footer-contents ul > li {
+  display: inline-block;
+  font-size: 11px;
+  margin-left: 1rem;
+}
+.container > .footer-contents ul > li a {
+  color: #f9f9f9;
+  text-decoration: none;
+}
+.container > .footer-contents ul > li a:hover {
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.container > .copyrights p {
+  margin: 1rem 0 1rem 1rem;
+  font-size: 11px;
+  color: #f9f9f9;
+}
+
+.signin-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.signin-container > .signin-card {
+  padding: 2rem;
+  background: #f9f9f9;
+  border-radius: 20px;
+  width: fit-content;
+}
+.signin-container > .signin-card > p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+.signin-container > .signin-card > form > input {
+  border: 2px solid transparent;
+  background: #DEDEDE;
+  border-radius: 10px;
+  padding: 10px;
+  width: 23rem;
+  outline: none;
+}
+.signin-container > .signin-card > form > input:hover, .signin-container > .signin-card > form > input:focus {
+  border: 2px solid #b8b4b4;
+}
+.signin-container > .signin-card > form > .login-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.7rem;
+}
+.signin-container > .signin-card > form > .login-icons svg {
+  cursor: pointer;
+  height: 36px;
+  width: 36px;
+}
+.signin-container > .signin-card > form > .login-icons svg:first-child {
+  fill: #1877F2;
+}
+.signin-container > .signin-card > form > .login-icons svg:not(:last-child) {
+  margin-right: 1.7rem;
+}
+.signin-container > .signin-card > form > .submit-btn {
+  display: flex;
+  justify-content: center;
+}
+.signin-container > .signin-card > form > .submit-btn > button {
+  width: 100%;
+  margin-top: 2rem;
+  border: 2px solid transparent;
+  cursor: pointer;
+  border-radius: 1rem;
+  padding: 0.5rem 1.3rem;
+  background: #D13639;
+  color: #f9f9f9;
+}
+.signin-container > .signin-card > form > .submit-btn > button:hover {
+  animation: changeBgOnHover 80ms;
+  animation-fill-mode: forwards;
+}
+.signin-container > .signin-card > form > .unable-to-signin {
+  margin-top: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+.signin-container > .signin-card > form > .unable-to-signin > a {
+  color: #888888;
+  text-decoration: none;
+  font-size: 11px;
+}
+.signin-container > .signin-card > form > .unable-to-signin > a:hover {
+  color: #2e2e2e;
+}
+
+/*# sourceMappingURL=index.css.map */

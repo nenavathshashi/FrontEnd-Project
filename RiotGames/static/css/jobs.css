@@ -1,0 +1,291 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #e7e6e3;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "FF Mark";
+  src: url("./fonts/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "Mark Pro";
+  src: url("./fonts/Mark Pro.ttf") format("truetype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark", Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+  background: #D13639;
+  color: #f9f9f9;
+}
+
+@keyframes changeBgOnHover {
+  0% {
+    background: linear-gradient(to top, #222222 25%, #d13639 26%);
+  }
+
+  25% {
+    background: linear-gradient(to top, #222222 50%, #d13639 51%);
+  }
+
+  50% {
+    background: linear-gradient(to top, #222222 75%, #d13639 76%);
+  }
+
+  100% {
+    background: linear-gradient(to top, #222222 100%, #d13639 101%);
+  }
+}
+
+.video-div {
+  position: relative;
+}
+
+.video-div .video-div-over-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.video-div .video-div-over-content p {
+  font-size: 5rem;
+  font-weight: bold;
+  color: #f9f9f9;
+  padding-bottom: 1rem;
+}
+
+.video-div .video-div-over-content a {
+  user-select: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border-radius: 20px;
+  padding: 7px 1.4rem;
+  background-color: #D13639;
+  color: #f9f9f9;
+  font-family: monospace;
+}
+
+.video-div .video-div-over-content a:hover {
+  animation: changeBgOnHover 120ms;
+  animation-fill-mode: forwards;
+}
+
+.pictures {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  column-gap: 1.3rem;
+}
+
+.pictures div h3 {
+  background-color: #2b2a29;
+  margin-top: -5px;
+  font-size: 1.4rem;
+  text-align: center;
+  width: 100%;
+  color: #f9f9f9;
+  padding: 10px 0;
+}
+
+.pictures div p {
+  background-color: #2b2a29;
+  color: #f9f9f9;
+  font-family: monospace;
+  font-size: 1.03rem;
+  padding: 0 0 8px 10px;
+}
+
+.pic {
+  overflow: hidden;
+}
+
+.pic-details {
+  position: relative;
+  z-index: 100;
+}
+
+.pic img {
+  cursor: pointer;
+  object-fit: cover;
+  height: 80%;
+  width: 100%;
+  transition: transform .3s ease;
+}
+
+.pic img:hover {
+  z-index: -1;
+  transform: scale(1.1);
+}
+
+.pictures-div {
+  padding: 0 2%;
+}
+
+.pictures-div h1 {
+  margin: 2.5rem 0;
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.university-pic-container {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  position: relative;
+  width: max-content;
+}
+
+.university-pic-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: transform .4s ease;
+}
+
+.university-pic-container img:hover {
+  transform: scale(1.1);
+}
+
+.university-pic-container .university-pic-container-content {
+  font-size: 2.3rem;
+  color: #f9f9f9;
+  position: absolute;
+  top: 50%;
+  left: 1rem;
+}
+
+.university-pic-container .university-pic-container-content p {
+  font-weight: bold;
+  user-select: none;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.university-pic-container .university-pic-container-content a {
+  user-select: none;
+  cursor: pointer;
+  font-size: 1rem;
+  font-family: inherit;
+  border-radius: 30px;
+  padding: 5px 15px;
+  text-decoration: none;
+  background-color: #D13639;
+  color: #f9f9f9;
+  font-family: monospace;
+}
+
+.university-pic-container .university-pic-container-content a:hover {
+  animation: changeBgOnHover 120ms;
+  animation-fill-mode: forwards;
+}
+
+.jobs {
+  margin: 4rem 0;
+}
+
+.jobs h1 {
+  display: inline-block;
+  font-size: 4rem;
+  font-family: "Mark Pro", Arial, sans-serif;
+  color: #2b2a29;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 3rem;
+}
+
+.jobs h1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 10px;
+  height: 4px;
+  background: #D13639;
+  width: 100%;
+}
+
+.jobs p {
+  font-size: 1.2rem;
+  margin-left: 10%;
+  color: #2b2a29;
+}
+
+.row1 {
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+.main-list {
+  display: grid;
+  grid-template-columns: repeat(3, 33.33%);
+}
+
+.main-list .list {
+  margin-left: 2rem;
+}
+
+.main-list .list select {
+  width: 90%;
+  font-size: .9rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: #DBD9D6;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 10px 1rem;
+  transition: border .2s ease;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 512' fill='%23848484'%3E%3Cpath d='M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: .6rem;
+}
+
+.main-list .list select:hover {
+  border: 2px solid #C5C5C3;
+}
+
+.main-list .list select option {
+  background: #DBD9D6;
+  font-size: .8rem;
+}
+
+.row2 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  transition: color 200ms ease;
+}
+
+.row2:hover>.column1>p {
+  color: #D13639;
+  cursor: pointer;
+}
+
+.row2:hover>.column1>.underline-target {
+  text-decoration: underline;
+}
+
+.row2:nth-child(2n+1) {
+  background: rgba(126, 126, 126, 0.1);
+}
+
+.column1 p {
+  font-size: 1rem;
+  padding: 1rem 0;
+  width: 100%;
+}

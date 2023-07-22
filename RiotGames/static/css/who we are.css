@@ -1,0 +1,454 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  overflow: scroll;
+  background-color: #e7e6e3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: "FF Mark";
+  src: url("../fonts/ff mark sv/FontFont_FF.Mark.Pro.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FF Mark", Arial, Helvetica, sans-serif;
+}
+
+*::selection {
+  background: #D13639;
+  color: #f9f9f9;
+}
+
+.background-image {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  position: absolute;
+  top: 5%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 600px;
+  background-image: url(https://www.riotgames.com/assets/img/structure/6819de603d160dca6a4b7d51a3cdaa8b/hero--dark-sketch.jpg);
+}
+
+.background-image .c1 {
+  position: relative;
+  top: 10%;
+  left: 5%;
+  width: 625px;
+  height: 360px;
+  background-image: url(https://www.riotgames.com/darkroom/640/7b1f9916e84ff8f6197821928e2a4426:89ee19d4808e39f2b71ca0e6605f1e1b/ritodaze-6-3.jpg);
+}
+
+.c2 {
+  display: grid;
+  grid-template-rows: 70px 70px;
+}
+
+.r1 {
+  padding-top: 50px;
+  padding-left: 80px;
+}
+
+.r1>p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #e7e6e3;
+  background-color: red;
+  display: block;
+  width: 50px;
+}
+
+.r2 {
+  font-size: 38px;
+  padding-left: 80px;
+  color: #e7e6e3;
+}
+
+.our_story {
+  position: relative;
+  top: 800px;
+  text-align: left;
+  font-size: 22px;
+  color: #2b2a29;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 36px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  width: 55%;
+  left: 24%;
+  justify-content: left;
+}
+
+.our_story>h1 {
+  text-align: center;
+}
+
+.right-image {
+  position: relative;
+  top: 850px;
+  font-size: 28px;
+  background-image: url(../images/who\ we\ are/img1.jpg);
+  background-repeat: no-repeat;
+  height: 250px;
+  padding: 10px;
+  background-color: #dbdad6;
+  background-size: auto 400px;
+  background-position: 100% -90%;
+}
+
+.right-image>h1 {
+  text-align: center;
+  padding-top: 5%;
+}
+
+.our_values-2 .slide1 {
+  position: relative;
+  top: 850px;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  background-image: url(../images/who\ we\ are/img2.jpeg);
+  background-repeat: no-repeat;
+  height: 534px;
+  width: 100%;
+  background-size: 100% 534px;
+  column-gap: 0.5px;
+  color: white;
+  font-weight: 300;
+  text-align: center;
+}
+
+.our_values-2 .c1 {
+  border: 0.25px solid white;
+  padding-top: 70%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.our_values-2 .c2 {
+  /* border: 0.5px solid white; */
+  padding-top: 70%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.our_values-2 .c3 {
+  border: 0.25px solid white;
+  padding-top: 70%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.our_values-2 .c4 {
+  /* border: 0.5px solid white; */
+  padding-top: 70%;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.our_values-2 .c5 {
+  border: 0.25px solid white;
+  padding-top: 70%;
+  font-size: 32px;
+  font-weight: bold;
+
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.our_values-3 {
+  position: absolute;
+  top: 390%;
+  /* background-color: #D13639; */
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 100%;
+}
+
+.our_values-3 .c11 {
+  padding-left: 10%;
+}
+
+.our_values-3 .c12 {
+  padding-top: 30%;
+  padding-left: 10%;
+
+}
+
+.our_values-3 .c12 .val1 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 54px;
+}
+
+.our_values-3 .c12>p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 70%;
+  letter-spacing: 0.03em;
+}
+
+.bt1 {
+  width: 200px;
+  border-radius: 30px;
+  border: 0;
+  font-size: 20px;
+  background-color: #D13639;
+  color: #dbdad6;
+  line-height: 50px;
+  /* padding-left: 5%; */
+
+}
+
+.bt1:hover {
+  background-color: #2b2a29;
+}
+
+.our_values-3 .c21 {
+  padding-left: 20%;
+  padding-top: 15%;
+}
+
+.our_values-3 .c21>h1 {
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 54px;
+}
+
+.our_values-3 .c21>p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px;
+  width: 70%;
+  letter-spacing: 0.03em;
+}
+
+.last {
+  background-color: rgb(43, 42, 40);
+  position: absolute;
+  top: 600%;
+  /* height: 500px; */
+
+
+}
+
+.last>h1 {
+  text-align: center;
+  padding-top: 6%;
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 74px;
+  color: #dbdad6;
+
+}
+
+.last>p {
+  text-align: center;
+  padding-left: 20%;
+  padding-right: 20%;
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 36px;
+  color: #dbdad6;
+}
+
+.bt2 {
+  width: 200px;
+  border-radius: 30px;
+  border: 0;
+  font-size: 20px;
+  background-color: #D13639;
+  color: #dbdad6;
+  line-height: 50px;
+  /* padding-left: 40%; */
+
+}
+
+.btt {
+  padding-left: 45%;
+}
+
+.c11,
+.c21,
+.c31 {
+  padding-left: 20%;
+}
+
+.last2 {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  row-gap: 40px;
+}
+
+.c13,
+.c23,
+.c33 {
+  color: #dbdad6;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+}
+
+.c12,
+.c22,
+.c32 {
+  text-align: center;
+}
+
+.H1 {
+  color: #dbdad6;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.H2 {
+  color: #dbdad667;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.last3 {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  top: 770%;
+
+}
+
+.bt3 {
+  width: 300px;
+  border-radius: 30px;
+  border: 0;
+  font-size: 20px;
+  background-color: #D13639;
+  color: #dbdad6;
+  line-height: 50px;
+}
+
+.diversity_inclusion {
+  position: relative;
+  top: 1000px;
+  margin-left: 50px;
+}
+
+.theory {
+  float: right;
+}
+
+a {
+  color: black;
+  /* font-weight: 700; */
+}
+
+.section-container__5 {
+  background: #252423;
+  padding: 2.4rem;
+}
+
+.section-container__5 .footer {
+  display: grid;
+  grid-template-columns: 8% 80% 12%;
+}
+
+.section-container__5 .footer>div.footer-logo a svg {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+  fill: #656462;
+  cursor: pointer;
+  transition: fill 200ms ease-in-out;
+}
+
+.section-container__5 .footer>div.footer-logo a svg:hover {
+  fill: #D13639;
+}
+
+.section-container__5 .footer>div.social-handles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 1rem;
+}
+
+.section-container__5 .footer>div.social-handles a>svg {
+  cursor: pointer;
+  height: 1rem;
+  width: 1rem;
+  fill: #656462;
+  cursor: pointer;
+}
+
+.section-container__5 .footer>div.social-handles a>svg:hover {
+  fill: #D13639;
+}
+
+.section-container__5 .footer>div.footer-content ul {
+  list-style: none;
+}
+
+.section-container__5 .footer>div.footer-content ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.section-container__5 .footer>div.footer-content ul li a {
+  font-family: "Mark Pro";
+  text-decoration: none;
+  color: #656462;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: bold;
+  transition: color 0.2s ease-in-out;
+}
+
+.section-container__5 .footer>div.footer-content ul li a:hover {
+  text-decoration: underline;
+  color: #f9f9f9;
+  text-underline-offset: 1px;
+}
+
+.section-container__5 .footer>div.social-handles a>svg {
+  transition: fill 200ms ease-in-out;
+}
+
+.section-container__5 .footer>div.social-handles a>svg:hover {
+  fill: #D13639;
+}
+
+.section-container__5 hr {
+  border: 1px solid #656462;
+  margin-top: 1.5rem;
+}
+
+.section-container__5 .other-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.section-container__5 .other-content span {
+  font-family: "FF Mark";
+  color: #656462;
+  font-size: 12px;
+  padding-top: 2rem;
+}
+
+.section-container__5 .other-content span.go-up {
+  cursor: pointer;
+  font-stretch: extra-condensed;
+  text-align: right;
+}
+
+.section-container__5 .other-content span.go-up a svg {
+  margin-left: 1px;
+  height: 12px;
+  width: 12px;
+  fill: #656462;
+  cursor: pointer;
+}
